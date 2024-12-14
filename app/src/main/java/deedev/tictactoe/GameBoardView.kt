@@ -13,7 +13,7 @@ class GameBoardView(context: Context, attrs: AttributeSet) : View(context, attrs
 
     fun setWinningCells(cells: List<Pair<Int, Int>>) {
         winningCells = cells
-        invalidate() // Re-draw the view when new cells are set
+        invalidate()
     }
 
     override fun onDraw(canvas: Canvas) {
