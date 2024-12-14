@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Game Status Text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player X's Turn"
+        android:textSize="24sp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#ffffff"/>
+
+    <!-- Game Grid -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusText"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Individual Grid Cells (Buttons) -->
+        <Button
+            android:id="@+id/cell00"
+            android:tag="0_0"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+        <Button
+            android:id="@+id/cell01"
+            android:tag="0_1"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+        <Button
+            android:id="@+id/cell02"
+            android:tag="0_2"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+
+        <Button
+            android:id="@+id/cell10"
+            android:tag="1_0"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+        <Button
+            android:id="@+id/cell11"
+            android:tag="1_1"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+        <Button
+            android:id="@+id/cell12"
+            android:tag="1_2"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+
+        <Button
+            android:id="@+id/cell20"
+            android:tag="2_0"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+        <Button
+            android:id="@+id/cell21"
+            android:tag="2_1"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+        <Button
+            android:id="@+id/cell22"
+            android:tag="2_2"
+            style="@style/GridCellStyle"
+            android:onClick="onCellClicked" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
